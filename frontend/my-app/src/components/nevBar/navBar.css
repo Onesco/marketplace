@@ -1,0 +1,58 @@
+:root {
+    /* --navbar-bg:gray; */
+    --font-weight-bg:800; 
+    --font-weight-md:600;
+    --font-weight-sm:400;
+    --font-size-bg:2rem;
+    --font-size-md:1.3rem;
+    --font-size-sm:1rem;
+    --font-size-xsm:0.8rem;
+}
+.navbar-wrapper{
+    background-color: var(--navbar-bg);
+    width: 100%;
+    font-size: var(--font-size-xsm);
+}
+.navbar{
+    width: 85%;
+    margin: 0 auto;
+    display: flex; 
+    align-items: center; 
+    height: 8vh;
+}
+
+.left-nav{
+    flex: 5;
+}
+.left-nav > .logo-title{
+    color: rgb(187, 99, 67);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bg);
+}
+.right-nav{
+    display: none;
+    flex: 6;
+}
+
+.right-nav > button{
+    border-radius: 20px;
+    padding: 0.7rem 1.6rem;
+    background-color: aliceblue;
+    outline: none;
+    border: 1px solid black;
+}
+
+@media screen and (min-width: 767px) {
+    .right-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar-wrapper{
+        font-size: var(--font-size-sm);
+    }
+    .hambuger{
+        display: none;
+    }
+}

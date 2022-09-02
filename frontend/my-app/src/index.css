@@ -5,9 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url('C:\Users\ONESIMUS\Desktop\marketplace\frontend\my-app\src\logo512.png');
-  background-position: center;
-  background-repeat: no-repeat; */
+  box-sizing: border-box;
 }
 
 code {

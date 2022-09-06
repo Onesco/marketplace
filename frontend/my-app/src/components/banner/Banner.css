@@ -1,12 +1,167 @@
+:root {
+    --primary-black-color:black;
+    --bg-primary-color:tan;
+    --bg-secondary-color:rgb(244, 228, 207);
+    --font-weight-xbg:900;
+    --font-weight-bg:800; 
+    --font-weight-md:600;
+    --font-weight-sm:400;
+    --font-weight-xsm:200;
+    --font-size-bg:2rem;
+    --font-size-md:1.3rem; 
+    --font-size-sm:1rem;
+    --font-size-xsm:0.8rem;
+    --nav-height:8vh;
+    --secondary-font-family: "utuntu";
+    --primary-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.banner-container{
+    background-color: var(--bg-primary-color);
+}
 .banner{
-    height: 30rem;
-    width:100%
+    height: 35rem;
+    display: flex;
+    position: relative;
 }
 
+.right-banner{
+    margin-top: 10px;
+}
 .banner-image{
     width: 100%;
     height: 100%;
     object-fit:cover;
     overflow: hidden;
     object-position: center;
+    opacity: 0.2;
+}
+
+/* left -banner stylings */
+.banner-left-wrapper{
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    color: black;
+    bottom: 0px;
+    z-index: 23;
+}
+
+.left-banner{
+    margin: 0 auto;
+    width: 80%;
+}
+.left-banner-container{
+    max-width: 400px;
+}
+
+.type-cloth{
+    font-weight: var(--font-size-bg);
+    font-size: 1.2rem;
+    font-family: var(--primary-font-family);
+    
+}
+.brand-wrapper{
+    font-family: var(--primary-font-family);
+    display: flex;
+    gap: 1.5rem;
+}
+.btn{
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 0.6rem;
+    margin-right: 1.5rem;
+    outline: none;
+    font-weight: 400;
+
+}
+.btn-left{
+    background-color: #2a7bfdac;
+}
+.btn-right{
+    background-color: transparent;
+}
+
+.banner-text{
+    font-size: small;
+    line-height: 1.5rem;
+    font-weight: 300;
+    /* margin-bottom: 10px; */
+}
+
+.left-banner-container> p{
+    /* font-size: 1rem; */
+    font-weight: var(--font-weight-xsm); 
+    line-height: 2rem;
+    font-family: var(--secondary-font-family);
+    font-size: var(--font-weight-sm);
+}
+
+@media screen and (min-width: 500px){
+    .left-banner-container> h1{
+        font-size: 2.5rem;
+        font-weight: 900; 
+        font-family: var(--secondary-font-family);
+        line-height: 4.5rem;
+    }
+    .left-banner-container> p{
+        font-size: 1rem;
+        font-weight: var(--font-weight-xsm); 
+        line-height: 2rem;
+        font-family: var(--secondary-font-family);
+    }
+    .btn{
+        padding: 1rem;
+        /* margin-bottom: 1rem; */
+        margin-right: 2.5rem;
+    }
+}
+
+
+@media screen and (min-width:800px){
+    .banner{
+        height: 42rem;
+    }
+    .banner-left-wrapper{
+        position: relative;
+        flex: 6;
+    }
+    .left-banner-container> h1{
+        font-size: 4.2rem;
+        font-weight: 900; 
+        margin-block-start: 0.37em;
+        margin-block-end: 0.37em;
+    }
+    .left-banner-container> p{
+        font-size: 1.2rem;
+        font-weight: var(--font-weight-sm); 
+        line-height: 2.5rem;
+    }
+    .left-banner{
+        display: flex;
+        width: 60%;
+        height: 100%;
+        align-items: center;
+    }
+    .right-banner{
+        margin: 1.5rem;
+        flex: 6;
+        position: relative;
+        border: 1px solid gray;
+    }
+    .banner-image{
+        opacity: 1;
+        position: absolute;
+        width: 99.5%;
+        overflow-x: hidden;
+        top: 30px;
+        left: 30px;
+        height: calc(100% - 6px);
+    }
+    .left-banner-container{
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        min-width: 400px;
+        z-index: 26;
+    }
 }
